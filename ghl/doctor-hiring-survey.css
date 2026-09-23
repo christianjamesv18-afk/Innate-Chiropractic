@@ -1,127 +1,50 @@
 /* =========================================================
    Innate Chiropractic | IC Doctor Hiring Application Form
    Paste into: Survey Builder > Styles panel > Advanced > Custom CSS
-   Brand: deep navy + Innate blue, bold italic headings (matches logo)
+   Colors are written out in full (no CSS variables) because
+   GoHighLevel scopes custom CSS, which breaks :root variables.
+   Navy #0b1f33 | Blue #0a8fd8 | Border #d6dee6
    ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,700;1,800&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,700&display=swap');
 
-:root {
-  --ic-navy: #0b1f33;
-  --ic-blue: #0a8fd8;
-  --ic-blue-dark: #0773b0;
-  --ic-blue-tint: #e8f4fb;
-  --ic-ink: #1c2733;
-  --ic-muted: #6b7a89;
-  --ic-border: #d6dee6;
-  --ic-bg: #f4f7fa;
-  --ic-radius: 10px;
-}
-
-/* ---------- Page ---------- */
-body,
-.hl-app,
-#_builder-form,
-.ghl-form-wrap,
-.form-builder--wrap {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-  color: var(--ic-ink) !important;
-}
-
-body {
-  background: var(--ic-bg) !important;
-}
-
-/* ---------- Card / slide container ---------- */
+/* ---------- Card ---------- */
 .ghl-form-wrap,
 .form-builder--wrap,
 #_builder-form {
-  background: #ffffff !important;
-  border: none !important;
-  border-top: 6px solid var(--ic-blue) !important;
+  border-top: 6px solid #0a8fd8 !important;
   border-radius: 14px !important;
   box-shadow: 0 18px 45px -18px rgba(11, 31, 51, 0.28) !important;
-  overflow: hidden;
-}
-
-/* ---------- Slide / section titles ---------- */
-h1, h2, h3,
-.ghl-header,
-.ghl-title,
-.form-builder--item h1,
-.form-builder--item h2 {
-  font-family: 'Poppins', sans-serif !important;
-  font-style: italic !important;
-  font-weight: 800 !important;
-  color: var(--ic-navy) !important;
-  letter-spacing: -0.01em;
 }
 
 /* ---------- Field labels ---------- */
 label,
 .label-alignment,
-.form-builder--item label,
-.ghl-question-label,
-.field-label {
+.form-builder--item label {
   font-family: 'Poppins', sans-serif !important;
   font-weight: 600 !important;
-  font-size: 15px !important;
-  color: var(--ic-navy) !important;
-  margin-bottom: 8px !important;
+  color: #0b1f33 !important;
 }
 
-/* Required asterisk in brand blue */
-label .required,
-.form-builder--item label span[style*="color"],
-.ghl-question-label .required {
-  color: var(--ic-blue) !important;
-}
-
-/* ---------- Inputs, selects, textareas ---------- */
+/* ---------- Inputs, dropdowns, textareas ---------- */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="number"],
 input[type="date"],
 input[type="url"],
-select,
 textarea,
 .form-control,
-.multiselect__tags,
-.vs__dropdown-toggle {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 15px !important;
-  color: var(--ic-ink) !important;
-  background: #fbfcfd !important;
-  border: 1.5px solid var(--ic-border) !important;
-  border-radius: var(--ic-radius) !important;
-  min-height: 48px !important;
-  padding: 12px 14px !important;
+.multiselect__tags {
+  color: #1c2733 !important;
+  background-color: #fbfcfd !important;
+  border: 1.5px solid #d6dee6 !important;
+  border-radius: 10px !important;
   box-shadow: none !important;
-  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
-}
-
-textarea,
-textarea.form-control {
-  min-height: 120px !important;
-  line-height: 1.5 !important;
-}
-
-/* Inputs with a leading icon (email field) */
-.form-builder--item .input-group input,
-.form-builder--item input.pl-10 {
-  padding-left: 40px !important;
-}
-
-input::placeholder,
-textarea::placeholder,
-.multiselect__placeholder {
-  color: #9aa7b4 !important;
-  opacity: 1;
+  transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
 }
 
 input:hover,
-select:hover,
 textarea:hover,
 .form-control:hover,
 .multiselect__tags:hover {
@@ -129,187 +52,107 @@ textarea:hover,
 }
 
 input:focus,
-select:focus,
 textarea:focus,
 .form-control:focus,
 .multiselect--active .multiselect__tags {
   outline: none !important;
-  background: #ffffff !important;
-  border-color: var(--ic-blue) !important;
+  background-color: #ffffff !important;
+  border-color: #0a8fd8 !important;
   box-shadow: 0 0 0 4px rgba(10, 143, 216, 0.15) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9aa7b4 !important;
 }
 
 /* Dropdown arrow + open list */
 .multiselect__select:before {
-  border-color: var(--ic-blue) transparent transparent !important;
+  border-color: #0a8fd8 transparent transparent !important;
 }
 
 .multiselect__content-wrapper {
-  border: 1.5px solid var(--ic-blue) !important;
-  border-radius: 0 0 var(--ic-radius) var(--ic-radius) !important;
-  box-shadow: 0 12px 24px -12px rgba(11, 31, 51, 0.25) !important;
+  border: 1.5px solid #0a8fd8 !important;
+  border-radius: 0 0 10px 10px !important;
 }
 
 .multiselect__option--highlight,
 .multiselect__option--highlight:after {
-  background: var(--ic-blue) !important;
+  background-color: #0a8fd8 !important;
   color: #ffffff !important;
 }
 
 .multiselect__option--selected {
-  background: var(--ic-blue-tint) !important;
-  color: var(--ic-navy) !important;
-  font-weight: 600 !important;
+  background-color: #e8f4fb !important;
+  color: #0b1f33 !important;
 }
 
-/* ---------- Radio + checkbox options ---------- */
+/* Radio + checkbox */
 input[type="radio"],
 input[type="checkbox"] {
-  accent-color: var(--ic-blue);
-  width: 18px !important;
-  height: 18px !important;
-  min-height: 0 !important;
+  accent-color: #0a8fd8;
 }
 
-.option,
-.radio-option,
-.checkbox-option {
-  border: 1.5px solid var(--ic-border);
-  border-radius: var(--ic-radius);
-  padding: 10px 14px;
-  margin-bottom: 8px;
-  transition: border-color .2s ease, background .2s ease;
-}
-
-.option:hover,
-.radio-option:hover,
-.checkbox-option:hover {
-  border-color: var(--ic-blue);
-  background: var(--ic-blue-tint);
-}
-
-/* ---------- Spacing between fields ---------- */
-.form-builder--item,
-.form-field-container {
-  margin-bottom: 20px !important;
-}
-
-/* ---------- Footer / navigation ---------- */
-.ghl-footer,
-.ghl-footer-buttons,
-.form-builder--footer {
-  background: #f8fafc !important;
-  border-top: 1px solid #e7edf2 !important;
-  padding: 18px 24px !important;
-}
-
-/* Next + Submit: solid brand-blue pill */
+/* ---------- Next / Submit button ---------- */
 .ghl-footer-next,
 .ghl-submit-btn,
-.btn-next,
-button[type="submit"],
-.form-builder--item .btn.btn-dark {
+button[type="submit"] {
   font-family: 'Poppins', sans-serif !important;
   font-weight: 700 !important;
   font-style: italic !important;
-  font-size: 15px !important;
   letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
   color: #ffffff !important;
-  background: var(--ic-blue) !important;
+  background: #0a8fd8 !important;
+  background-color: #0a8fd8 !important;
   border: none !important;
   border-radius: 999px !important;
-  padding: 13px 30px !important;
+  padding: 12px 28px !important;
   box-shadow: 0 8px 18px -8px rgba(10, 143, 216, 0.7) !important;
-  cursor: pointer;
-  transition: background .2s ease, transform .15s ease, box-shadow .2s ease;
+  transition: background-color .2s ease, transform .15s ease;
 }
 
 .ghl-footer-next *,
 .ghl-submit-btn *,
-.btn-next * {
+button[type="submit"] * {
   color: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 .ghl-footer-next:hover,
 .ghl-submit-btn:hover,
-.btn-next:hover,
-button[type="submit"]:hover,
-.form-builder--item .btn.btn-dark:hover {
-  background: var(--ic-navy) !important;
+button[type="submit"]:hover {
+  background: #0b1f33 !important;
+  background-color: #0b1f33 !important;
   transform: translateY(-1px);
-  box-shadow: 0 10px 22px -10px rgba(11, 31, 51, 0.8) !important;
 }
 
-/* Back: quiet outline pill */
-.ghl-footer-back,
-.btn-back {
+/* ---------- Back button ---------- */
+.ghl-footer-back {
   font-family: 'Poppins', sans-serif !important;
   font-weight: 600 !important;
-  font-size: 14px !important;
-  color: var(--ic-navy) !important;
-  background: transparent !important;
-  border: 1.5px solid var(--ic-border) !important;
+  color: #0b1f33 !important;
+  border: 1.5px solid #d6dee6 !important;
   border-radius: 999px !important;
-  padding: 11px 24px !important;
-  transition: border-color .2s ease, color .2s ease;
+  padding: 10px 22px !important;
 }
 
-.ghl-footer-back:hover,
-.btn-back:hover {
-  color: var(--ic-blue) !important;
-  border-color: var(--ic-blue) !important;
+.ghl-footer-back:hover {
+  color: #0a8fd8 !important;
+  border-color: #0a8fd8 !important;
 }
 
 /* ---------- Progress bar ---------- */
-.ghl-progress-bar,
-.progress {
-  background: #e3eaf0 !important;
-  border-radius: 999px !important;
-  height: 8px !important;
-  overflow: hidden;
-}
-
 .ghl-progress-bar-fill,
 .progress-bar {
-  background: linear-gradient(90deg, var(--ic-navy), var(--ic-blue)) !important;
-  border-radius: 999px !important;
-}
-
-/* ---------- Validation errors ---------- */
-.error,
-.field-error,
-.text-danger {
-  color: #d64545 !important;
-  font-size: 13px !important;
-  margin-top: 6px !important;
-}
-
-input.error,
-.form-control.is-invalid {
-  border-color: #d64545 !important;
-  box-shadow: 0 0 0 4px rgba(214, 69, 69, 0.12) !important;
+  background: #0a8fd8 !important;
 }
 
 /* ---------- Mobile ---------- */
 @media (max-width: 640px) {
-  .ghl-form-wrap,
-  .form-builder--wrap,
-  #_builder-form {
-    border-radius: 10px !important;
-  }
-
   input,
-  select,
   textarea,
   .form-control {
     font-size: 16px !important; /* stops iOS zoom on focus */
-  }
-
-  .ghl-footer-next,
-  .ghl-submit-btn,
-  .btn-next,
-  button[type="submit"] {
-    width: 100%;
   }
 }
