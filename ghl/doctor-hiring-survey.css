@@ -9,15 +9,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,700&display=swap');
 
 /* ---------- Card ---------- */
-/* Blue accent strip drawn as a background layer, so it follows the
-   card's own rounded corners and leaves GHL's radius + shadow alone. */
+/* Straight blue strip across the top of the card. Drawn as an overlay
+   so the card's content can't paint over it, and it takes the card's
+   own top corner rounding instead of tapering at the ends. */
 .ghl-form-wrap,
 .form-builder--wrap,
 #_builder-form {
-  background-image: linear-gradient(#0a8fd8, #0a8fd8) !important;
-  background-size: 100% 5px !important;
-  background-position: top left !important;
-  background-repeat: no-repeat !important;
+  position: relative !important;
+}
+
+.ghl-form-wrap::before,
+.form-builder--wrap::before,
+#_builder-form::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 6px !important;
+  background: #0a8fd8 !important;
+  border-top-left-radius: inherit !important;
+  border-top-right-radius: inherit !important;
+  z-index: 5 !important;
+  pointer-events: none !important;
 }
 
 /* ---------- Field labels ---------- */
