@@ -75,12 +75,6 @@
   @keyframes ic-drift-1 { from { transform: translate(0, 0) scale(1); } to { transform: translate(120px, 60px) scale(1.2); } }
   @keyframes ic-drift-2 { from { transform: translate(0, 0) scale(1); } to { transform: translate(-110px, -50px) scale(1.15); } }
 
-  /* Scrolling info ribbon */
-  .ic-ticker { overflow: hidden; white-space: nowrap; }
-  .ic-ticker-track { display: inline-block; animation: ic-marquee 28s linear infinite; }
-  .ic-ticker:hover .ic-ticker-track { animation-play-state: paused; }
-  @keyframes ic-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
   /* Section headings: underline bar that grows and shimmers */
   .ic-h2::after { content: ""; display: block; width: 70px; height: 4px; margin: 12px auto 0; border-radius: 4px; background: currentColor; opacity: 0.85; transform-origin: center; animation: ic-bar 3s ease-in-out infinite; }
   @keyframes ic-bar { 0%, 100% { transform: scaleX(0.5); opacity: 0.5; } 50% { transform: scaleX(1.3); opacity: 1; } }
@@ -161,11 +155,6 @@
     <div class="ic-hero-in ic-badge" style="display: inline-block; background-color: #0086CB; color: white; padding: 14px 30px; border-radius: 8px; font-size: 18px; font-weight: bold; margin-top: 10px; animation-delay: 0.6s;">
       39 Myrtle Street, Claremont, NH &nbsp;|&nbsp; 45 Minutes &nbsp;|&nbsp; <span class="ic-dot" aria-hidden="true"></span>Limited to 15 Seats
     </div>
-  </div>
-
-  <!-- Scrolling Info Ribbon -->
-  <div class="ic-ticker" aria-hidden="true" style="background-color: #2766C0; color: #ffffff; font-size: 16px; font-weight: bold; padding: 12px 0; border-radius: 8px; margin: -20px 0 40px;">
-    <div class="ic-ticker-track"><span>In-person at our Claremont office &nbsp;&#9679;&nbsp; 45 minutes with Dr. Thomas &nbsp;&#9679;&nbsp; Get your questions answered &nbsp;&#9679;&nbsp; New and existing patients welcome &nbsp;&#9679;&nbsp; Only 15 seats &nbsp;&#9679;&nbsp; </span><span>In-person at our Claremont office &nbsp;&#9679;&nbsp; 45 minutes with Dr. Thomas &nbsp;&#9679;&nbsp; Get your questions answered &nbsp;&#9679;&nbsp; New and existing patients welcome &nbsp;&#9679;&nbsp; Only 15 seats &nbsp;&#9679;&nbsp; </span></div>
   </div>
 
   <!-- First Booking Section -->
