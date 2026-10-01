@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0086CB">
+  <title>Patient Portal | Innate Chiropractic</title>
+  <link rel="icon" href="assets/img/spine-symbol.png">
+  <link rel="stylesheet" href="assets/css/innate-portal.css">
+</head>
+<body>
+  <a class="ic-skip-link" href="#main">Skip to content</a>
+
+  <div class="ic-app">
+    <!-- Sidebar (drawer on tablet and phone) -->
+    <aside class="ic-sidebar" id="ic-sidebar" aria-label="Main navigation">
+      <div class="ic-sidebar__brand">
+        <img src="assets/img/innate-logo.png" alt="Innate Chiropractic">
+        <button class="ic-icon-btn ic-icon-btn--light ic-sidebar__close" type="button" data-ic-nav-toggle aria-label="Close menu">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="ic-sidebar__brand-line"></div>
+
+      <ul class="ic-nav">
+        <li class="ic-nav__label">My Care</li>
+        <li><a class="ic-nav__link" href="index.html">
+          <svg class="ic-nav__icon" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Dashboard</a></li>
+        <li><a class="ic-nav__link" href="#appointments">
+          <svg class="ic-nav__icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Appointments</a></li>
+        <li><a class="ic-nav__link" href="#care-plan">
+          <svg class="ic-nav__icon" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Care Plan</a></li>
+        <li><a class="ic-nav__link" href="#forms">
+          <svg class="ic-nav__icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>
+          Forms <span class="ic-nav__badge">2</span></a></li>
+
+        <li class="ic-nav__label">Account</li>
+        <li><a class="ic-nav__link" href="#messages">
+          <svg class="ic-nav__icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Messages</a></li>
+        <li><a class="ic-nav__link" href="#billing">
+          <svg class="ic-nav__icon" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Billing</a></li>
+        <li><a class="ic-nav__link" href="login.html">
+          <svg class="ic-nav__icon" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          Sign Out</a></li>
+      </ul>
+
+      <div class="ic-sidebar__footer">
+        Belmont, NC 28012<br>
+        <a href="tel:7043613277">704.361.3277</a><br>
+        &copy; <span data-ic-year></span> Innate Chiropractic
+      </div>
+    </aside>
+
+    <!-- Header -->
+    <header class="ic-header">
+      <button class="ic-icon-btn ic-header__menu" type="button" data-ic-nav-toggle aria-controls="ic-sidebar" aria-label="Open menu">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <a class="ic-header__logo" href="index.html"><img src="assets/img/innate-logo.png" alt="Innate Chiropractic"></a>
+      <h2 class="ic-header__title">Patient Portal</h2>
+
+      <div class="ic-header__actions">
+        <label class="ic-search">
+          <span class="ic-sr-only">Search</span>
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input class="ic-input" type="search" placeholder="Search the portal">
+        </label>
+        <button class="ic-icon-btn" type="button" aria-label="Notifications" data-ic-toast="You have 1 new message from Dr. Thomas.">
+          <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <span class="ic-icon-btn__dot"></span>
+        </button>
+        <span class="ic-avatar" aria-label="Signed in as Jane Doe">JD</span>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="ic-main" id="main">
+      <div class="ic-container">
+
+        <section class="ic-page-head ic-diagonals">
+          <span class="ic-eyebrow">Patient Portal</span>
+          <h1><span data-ic-greeting>Welcome</span>, Jane</h1>
+          <p>Here is a quick look at your care. Your next adjustment is on Thursday at 9:30 AM.</p>
+        </section>
+
+        <div class="ic-alert" role="status">
+          <div><strong>Reminder:</strong> Please complete your Health History form before your next visit.</div>
+          <button class="ic-alert__close" type="button" data-ic-dismiss aria-label="Dismiss">&times;</button>
+        </div>
+
+        <!-- Stats -->
+        <div class="ic-grid ic-grid--4 ic-grid--stats-mobile ic-mb-5">
+          <div class="ic-card ic-card--accent ic-stat">
+            <div class="ic-stat__icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div class="ic-stat__label">Next Visit</div>
+            <div class="ic-stat__value">Oct 3</div>
+            <div class="ic-stat__meta">Thu, 9:30 AM</div>
+          </div>
+          <div class="ic-card ic-card--accent ic-stat">
+            <div class="ic-stat__icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <div class="ic-stat__label">Visits Done</div>
+            <div class="ic-stat__value">8/12</div>
+            <div class="ic-stat__meta">Care plan 67%</div>
+          </div>
+          <div class="ic-card ic-card--accent ic-stat">
+            <div class="ic-stat__icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div>
+            <div class="ic-stat__label">Open Forms</div>
+            <div class="ic-stat__value">2</div>
+            <div class="ic-stat__meta">Due before visit</div>
+          </div>
+          <div class="ic-card ic-card--accent ic-stat">
+            <div class="ic-stat__icon"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+            <div class="ic-stat__label">Balance</div>
+            <div class="ic-stat__value">$0</div>
+            <div class="ic-stat__meta">All paid up</div>
+          </div>
+        </div>
+
+        <div class="ic-grid ic-grid--main-aside">
+          <!-- Appointments -->
+          <section class="ic-card" id="appointments">
+            <div class="ic-card__header">
+              <h3 class="ic-card__title">Upcoming Appointments</h3>
+              <button class="ic-btn ic-btn--primary ic-btn--sm ic-card__action" type="button" data-ic-modal-open="book-modal">
+                <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Book
+              </button>
+            </div>
+            <ul class="ic-list">
+              <li class="ic-list__item">
+                <div class="ic-date-chip"><span class="ic-date-chip__month">Oct</span><span class="ic-date-chip__day">3</span></div>
+                <div class="ic-list__body">
+                  <p class="ic-list__title">Chiropractic Adjustment</p>
+                  <p class="ic-list__meta">9:30 AM with Dr. Thomas Kuchenbrod</p>
+                </div>
+                <span class="ic-badge ic-badge--success">Confirmed</span>
+              </li>
+              <li class="ic-list__item">
+                <div class="ic-date-chip"><span class="ic-date-chip__month">Oct</span><span class="ic-date-chip__day">10</span></div>
+                <div class="ic-list__body">
+                  <p class="ic-list__title">Functional Medicine Consult</p>
+                  <p class="ic-list__meta">2:00 PM with Dr. Thomas Kuchenbrod</p>
+                </div>
+                <span class="ic-badge ic-badge--warning">Pending</span>
+              </li>
+              <li class="ic-list__item">
+                <div class="ic-date-chip"><span class="ic-date-chip__month">Oct</span><span class="ic-date-chip__day">17</span></div>
+                <div class="ic-list__body">
+                  <p class="ic-list__title">Re-Assessment</p>
+                  <p class="ic-list__meta">10:15 AM with Dr. Thomas Kuchenbrod</p>
+                </div>
+                <span class="ic-badge ic-badge--blue">Scheduled</span>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Care plan -->
+          <section class="ic-card ic-card--brand ic-diagonals" id="care-plan">
+            <div class="ic-card__body">
+              <span class="ic-eyebrow" style="color: var(--ic-seafoam-light);">Your Care Plan</span>
+              <h3>Spinal Correction Phase</h3>
+              <p class="ic-text-muted">8 of 12 visits complete. Keep it up, you are making great progress.</p>
+              <div class="ic-progress ic-mb-5" style="background: rgba(255,255,255,0.25);">
+                <div class="ic-progress__bar" data-ic-progress="67" style="background: var(--ic-white);"></div>
+              </div>
+              <a class="ic-btn ic-btn--white ic-btn--block" href="#care-plan">View Care Plan</a>
+            </div>
+          </section>
+        </div>
+
+        <div class="ic-section-break" aria-hidden="true"><span></span><span></span><span></span></div>
+
+        <!-- Tabs + responsive table -->
+        <section class="ic-card" id="billing">
+          <div class="ic-card__header">
+            <h3 class="ic-card__title">Records</h3>
+          </div>
+          <div class="ic-card__body">
+            <div class="ic-tabs" data-ic-tabs>
+              <button class="ic-tab" id="tab-visits" aria-controls="panel-visits" aria-selected="true" type="button">Visit History</button>
+              <button class="ic-tab" id="tab-invoices" aria-controls="panel-invoices" type="button">Invoices</button>
+              <button class="ic-tab" id="tab-forms" aria-controls="panel-forms" type="button">Forms</button>
+            </div>
+
+            <div class="ic-tab-panel" id="panel-visits">
+              <div class="ic-table-wrap">
+                <table class="ic-table ic-table--stack">
+                  <thead><tr><th>Date</th><th>Service</th><th>Provider</th><th>Status</th></tr></thead>
+                  <tbody>
+                    <tr><td>Sep 26, 2026</td><td>Adjustment</td><td>Dr. Thomas</td><td><span class="ic-badge ic-badge--success">Complete</span></td></tr>
+                    <tr><td>Sep 19, 2026</td><td>Adjustment</td><td>Dr. Thomas</td><td><span class="ic-badge ic-badge--success">Complete</span></td></tr>
+                    <tr><td>Sep 12, 2026</td><td>Initial Assessment</td><td>Dr. Thomas</td><td><span class="ic-badge ic-badge--success">Complete</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="ic-tab-panel" id="panel-invoices" hidden>
+              <div class="ic-table-wrap">
+                <table class="ic-table ic-table--stack">
+                  <thead><tr><th>Invoice</th><th>Date</th><th>Amount</th><th>Status</th></tr></thead>
+                  <tbody>
+                    <tr><td>#INV-1042</td><td>Sep 26, 2026</td><td>$65.00</td><td><span class="ic-badge ic-badge--success">Paid</span></td></tr>
+                    <tr><td>#INV-1031</td><td>Sep 12, 2026</td><td>$120.00</td><td><span class="ic-badge ic-badge--success">Paid</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="ic-tab-panel" id="panel-forms" hidden>
+              <ul class="ic-list" id="forms">
+                <li class="ic-list__item" style="padding-left:0;padding-right:0;">
+                  <div class="ic-list__body"><p class="ic-list__title">Health History</p><p class="ic-list__meta">About 10 minutes</p></div>
+                  <a class="ic-btn ic-btn--outline ic-btn--sm" href="#forms">Start</a>
+                </li>
+                <li class="ic-list__item" style="padding-left:0;padding-right:0;">
+                  <div class="ic-list__body"><p class="ic-list__title">Service Agreement</p><p class="ic-list__meta">Signature required</p></div>
+                  <a class="ic-btn ic-btn--outline ic-btn--sm" href="#forms">Sign</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Bottom tab bar (phones) -->
+  <nav class="ic-bottom-nav" aria-label="Quick navigation">
+    <a class="ic-bottom-nav__link" href="index.html">
+      <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Home</a>
+    <a class="ic-bottom-nav__link" href="#appointments">
+      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Visits</a>
+    <a class="ic-bottom-nav__link" href="#care-plan">
+      <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Care</a>
+    <a class="ic-bottom-nav__link" href="#messages">
+      <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Messages</a>
+    <button class="ic-bottom-nav__link" type="button" data-ic-nav-toggle aria-controls="ic-sidebar">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>More</button>
+  </nav>
+
+  <!-- Booking modal (bottom sheet on phones) -->
+  <div class="ic-modal" id="book-modal">
+    <div class="ic-modal__dialog" aria-labelledby="book-title">
+      <div class="ic-modal__header">
+        <h2 id="book-title">Book an Appointment</h2>
+        <button class="ic-icon-btn" type="button" data-ic-modal-close aria-label="Close">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <form data-ic-validate data-ic-success="Appointment request sent. We will confirm shortly.">
+        <div class="ic-modal__body">
+          <div class="ic-field">
+            <label class="ic-label" for="visit-type">Visit type <span class="ic-required">*</span></label>
+            <select class="ic-select" id="visit-type" required data-ic-error="Please choose a visit type.">
+              <option value="">Select one</option>
+              <option>Chiropractic Adjustment</option>
+              <option>Functional Medicine Consult</option>
+              <option>Re-Assessment</option>
+            </select>
+          </div>
+          <div class="ic-field">
+            <label class="ic-label" for="visit-date">Preferred date <span class="ic-required">*</span></label>
+            <input class="ic-input" id="visit-date" type="date" required data-ic-error="Please pick a date.">
+          </div>
+          <div class="ic-field">
+            <label class="ic-label" for="visit-notes">Notes for Dr. Thomas</label>
+            <textarea class="ic-textarea" id="visit-notes" placeholder="Anything we should know?"></textarea>
+          </div>
+        </div>
+        <div class="ic-modal__footer">
+          <button class="ic-btn ic-btn--ghost" type="button" data-ic-modal-close>Cancel</button>
+          <button class="ic-btn ic-btn--primary" type="submit">Request Appointment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/innate-portal.js"></script>
+</body>
+</html>
