@@ -1,24 +1,7 @@
-/* =========================================================
-   Innate Chiropractic | GHL Client Portal Custom CSS
-   Paste into: Memberships > Client Portal > Branding >
-   Advanced > Custom CSS  (no <style> tags needed)
-
-   Kept small on purpose so it does not break the portal layout.
-   The portal's main color (buttons, selected menu item) is set
-   in Branding > Brand Color, not here.
-   ========================================================= */
-
-/* Headings use the brand color */
-h1, h2, h3 {
-  color: #1F5F5B;
+/* Innate Chiropractic portal styles. Paste into Custom CSS. */
+h1, h2, h3, h4 {
+  color: #1F5F5B !important;
 }
-
-/* Softer page background */
-body {
-  background-color: #F7F5F0;
-}
-
-/* Links added by the Custom JS in the left menu */
-[data-ic-menu] [data-ic-item]:hover {
-  color: #1F5F5B;
+body, main {
+  background-color: #F7F5F0 !important;
 }
