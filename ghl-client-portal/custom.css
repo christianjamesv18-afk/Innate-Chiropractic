@@ -1,7 +1,56 @@
-/* Innate Chiropractic portal styles. Paste into Custom CSS. */
-h1, h2, h3, h4 {
-  color: #1F5F5B !important;
+/* Innate Chiropractic portal styles (Brand Guide v1). Paste into Custom CSS. */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Brand colors */
+:root {
+  --ic-deep-blue: #001446;
+  --ic-sky-blue: #00A6FF;
+  --ic-blue: #0086CB;
+  --ic-seafoam: #00E1EF;
+  --ic-gray: #C4C4C4;
 }
-body, main {
-  background-color: #F7F5F0 !important;
+
+/* White page background, Open Sans for body text */
+body {
+  background-color: #FFFFFF !important;
+  font-family: 'Open Sans', Arial, sans-serif !important;
+}
+
+/* Roboto Condensed headings in Deep Blue */
+h1, h2, h3, h4 {
+  font-family: 'Roboto Condensed', Arial, sans-serif !important;
+  color: var(--ic-deep-blue) !important;
+  letter-spacing: 0.2px;
+}
+
+/* Dark, high contrast header (brand rule for web) */
+header {
+  background-color: var(--ic-deep-blue) !important;
+  color: #FFFFFF !important;
+}
+header h1, header h2, header h3, header span, header a, header svg {
+  color: #FFFFFF !important;
+}
+
+/* Primary buttons in brand Blue */
+.n-button--primary-type,
+.hl-btn-primary,
+.btn-primary {
+  background-color: var(--ic-blue) !important;
+  border-color: var(--ic-blue) !important;
+  color: #FFFFFF !important;
+}
+.n-button--primary-type:hover,
+.hl-btn-primary:hover,
+.btn-primary:hover {
+  background-color: var(--ic-deep-blue) !important;
+  border-color: var(--ic-deep-blue) !important;
+}
+
+/* Links */
+a {
+  color: var(--ic-blue);
+}
+a:hover {
+  color: var(--ic-deep-blue);
 }
