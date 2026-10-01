@@ -1,0 +1,124 @@
+/* Innate Chiropractic | GoHighLevel Client Portal | Custom CSS */
+@import url("https://fonts.cdnfonts.com/css/aileron");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+:root {
+  --ic-blue: #0086cb;
+  --ic-blue-dark: #006ba3;
+  --ic-seafoam: #26c6f9;
+  --ic-gray: #c4c4c4;
+  --ic-black: #000000;
+  --ic-gradient: linear-gradient(135deg, #26c6f9 0%, #0086cb 100%);
+}
+
+/* Brand fonts */
+body { font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif !important; }
+h1, h2, h3, h4 { font-family: "Aileron", "Open Sans", Arial, sans-serif !important; }
+::selection { background: #d9f4fe; }
+
+/* Book Appointment sidebar tab */
+[data-ic-book-tab] { color: var(--ic-blue) !important; font-weight: 600; }
+[data-ic-book-tab] svg { color: var(--ic-blue); stroke: var(--ic-blue); }
+
+/* Book Appointment card on the dashboard */
+.ic-book-banner, .ic-book-banner *, .ic-book-fab { box-sizing: border-box; }
+.ic-book-banner {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 24px 0;
+  padding: 28px 32px;
+  border-radius: 14px;
+  background: var(--ic-blue);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 134, 203, 0.25);
+}
+/* Signature diagonal lines from the brand guide */
+.ic-book-banner::before,
+.ic-book-banner::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  height: 200%;
+  width: 120px;
+  transform: skewX(-35deg);
+  pointer-events: none;
+}
+.ic-book-banner::before { right: 22%; background: linear-gradient(180deg, rgba(38,198,249,0) 0%, rgba(38,198,249,0.45) 100%); }
+.ic-book-banner::after  { right: 6%;  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.18) 100%); }
+.ic-book-banner > * { position: relative; z-index: 1; }
+.ic-book-banner__eyebrow {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #d9f4fe;
+}
+.ic-book-banner h3 {
+  margin: 0 0 4px;
+  font-size: 26px;
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+}
+.ic-book-banner p { margin: 0; color: rgba(255, 255, 255, 0.88); }
+.ic-book-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ic-blue) !important;
+  font-family: "Aileron", "Open Sans", Arial, sans-serif;
+  font-weight: 700;
+  text-decoration: none !important;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.ic-book-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); }
+.ic-book-btn svg, [data-ic-book-tab] svg { width: 20px; height: 20px; }
+
+/* Floating Book button (phones only) */
+.ic-book-fab { display: none; }
+
+/* Phone version */
+@media (max-width: 768px) {
+  .ic-book-banner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    margin: 16px 0;
+    padding: 22px 20px;
+  }
+  .ic-book-banner h3 { font-size: 22px; }
+  .ic-book-btn { width: 100%; }
+
+  .ic-book-fab {
+    display: inline-flex;
+    position: fixed;
+    left: 16px;
+    bottom: calc(20px + env(safe-area-inset-bottom));
+    z-index: 9999;
+    align-items: center;
+    gap: 8px;
+    min-height: 52px;
+    padding: 0 20px;
+    border-radius: 999px;
+    background: var(--ic-gradient);
+    color: #fff !important;
+    font-family: "Aileron", "Open Sans", Arial, sans-serif;
+    font-weight: 700;
+    text-decoration: none !important;
+    box-shadow: 0 8px 22px rgba(0, 134, 203, 0.4);
+  }
+  .ic-book-fab svg { width: 20px; height: 20px; }
+}
