@@ -8,12 +8,14 @@
   /* ---------- 1. SETTINGS (edit these) ---------- */
   var CONFIG = {
     welcomeText: 'Welcome to the <strong>Innate Chiropractic</strong> Member Portal. Live a Life of Abundance.',
-    welcomeLink: { label: 'Book your next visit', url: 'https://innatechiropractic.org/' },
+    welcomeLink: { label: 'Book your next visit', url: 'https://appointment.innatechiropractic.org/existing-patient-appointment' },
 
     // Buttons shown in the quick links bar under the banner.
     // "primary: true" makes the button filled instead of outlined.
     quickLinks: [
-      { label: 'Book Appointment', url: 'https://innatechiropractic.org/', primary: true },
+      { label: 'Book Appointment', url: 'https://appointment.innatechiropractic.org/existing-patient-appointment', primary: true },
+      { label: 'Dry Needling', url: 'https://appointment.innatechiropractic.org/functional-dry-needling' },
+      { label: 'Class 4 Laser Therapy', url: 'https://appointment.innatechiropractic.org/class-4-laser-therapy' },
       { label: 'Call or Text 603-542-7726', url: 'tel:+16035427726' },
       { label: 'Office Hours', url: 'https://innatechiropractic.org/opening-hours/' },
       { label: 'Shop Supplements', url: 'https://us.fullscript.com/' },
@@ -22,7 +24,9 @@
 
     // Extra links added to the portal's own menu/tabs.
     navLinks: [
-      { label: 'Book Appointment', url: 'https://innatechiropractic.org/' },
+      { label: 'Book Appointment', url: 'https://appointment.innatechiropractic.org/existing-patient-appointment' },
+      { label: 'Dry Needling', url: 'https://appointment.innatechiropractic.org/functional-dry-needling' },
+      { label: 'Class 4 Laser Therapy', url: 'https://appointment.innatechiropractic.org/class-4-laser-therapy' },
       { label: 'Supplements', url: 'https://us.fullscript.com/' }
     ],
 
