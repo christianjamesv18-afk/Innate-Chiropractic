@@ -2,13 +2,14 @@
 (function () {
   var COLOR = '#1F5F5B';
   var LINKS = [
+    ['Schedule Appointment', 'https://innatechiropractic.org/schedule-appointment/'],
     ['Existing Patient', 'https://appointment.innatechiropractic.org/existing-patient-appointment'],
     ['Dry Needling', 'https://appointment.innatechiropractic.org/functional-dry-needling'],
     ['Class 4 Laser Therapy', 'https://appointment.innatechiropractic.org/class-4-laser-therapy'],
     ['Call or Text 603-542-7726', 'tel:+16035427726'],
     ['Office Hours', 'https://innatechiropractic.org/opening-hours/']
   ];
-  var MENU_COUNT = 3; // how many of the links above go in the left menu
+  var MENU_COUNT = 4; // how many of the links above go in the left menu
 
   function go(url) {
     if (url.indexOf('tel:') === 0) location.href = url;
