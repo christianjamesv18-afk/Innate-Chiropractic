@@ -1,56 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>We'd Love to Hear More | Innate Chiropractic</title>
+<!-- =========================================================
+     INNATE CHIROPRACTIC | Thank You page (ratings 1 to 4)
+     Shown after the patient submits private feedback in the survey.
+     Paste into a Custom HTML / Code element on the Thank You funnel step.
+     All styles are scoped to .innate-thanks so they do not affect the rest of the page.
+     ========================================================= -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
 <style>
-  :root{--bg:#f7faf9;--card:#ffffff;--ink:#1C1E1D;--muted:#5b7280;--brand:#3A83C5;--brand-dark:#1C1E1D;--line:#e3ece9}
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--ink);font-family:'Inter','Open Sans',system-ui,sans-serif;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
-  h1{font-family:'Montserrat','Poppins',sans-serif;color:var(--ink);line-height:1.25}
-  main{flex:1;width:100%;max-width:640px;margin:0 auto;padding:24px 16px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px 24px;box-shadow:0 6px 24px rgba(15,92,110,.06);text-align:center}
-  .card h1{font-size:1.75rem;margin-bottom:10px}
-  .card p.sub{color:var(--muted);font-size:1.05rem;margin-bottom:24px}
-  .stars{font-size:1.9rem;color:#f2b632;letter-spacing:4px;margin-bottom:12px}
-  .btn{display:block;width:100%;max-width:360px;margin:0 auto;min-height:54px;padding:15px 24px;border-radius:12px;background:var(--brand);color:#fff !important;font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.15rem;text-align:center;text-decoration:none;box-shadow:0 8px 18px rgba(58,131,197,.30);transition:background .2s,transform .15s}
-  .btn:hover,.btn:focus{background:var(--brand-dark);transform:translateY(-1px)}
-  .note{font-size:.9rem;color:var(--muted);margin-top:18px}
-  .note a{color:var(--brand);font-weight:600}
-  .divider{height:1px;background:var(--line);margin:28px 0}
-  .loc-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px}
-  .loc-links a{color:var(--brand);font-weight:600;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:.92rem}
-  .form-wrap{text-align:left;margin-top:8px}
-  @media (max-width:480px){.card{padding:26px 18px}.card h1{font-size:1.5rem}}
+  .innate-thanks{
+    --blue:#3A83C5;--black:#1C1E1D;--muted:#5E6B78;--soft:#EAF2FA;--line:#DCE6EE;
+    font-family:'Inter',system-ui,sans-serif;color:var(--black);line-height:1.6;
+    max-width:680px;margin:0 auto;padding:8px 16px 32px;text-align:center;box-sizing:border-box;
+  }
+  .innate-thanks *{box-sizing:border-box}
+
+  .innate-thanks .eyebrow{
+    display:inline-block;background:var(--soft);color:var(--blue);
+    font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;
+    letter-spacing:1.6px;text-transform:uppercase;padding:7px 16px;border-radius:999px;margin-bottom:16px;
+  }
+  .innate-thanks h1{
+    font-family:'Montserrat',sans-serif;font-weight:800;font-size:2.1rem;line-height:1.2;
+    color:var(--black);margin:0 0 12px;
+  }
+  .innate-thanks h1 span{color:var(--blue);white-space:nowrap}
+  .innate-thanks .stripe{
+    width:72px;height:5px;border-radius:999px;margin:0 auto 22px;
+    background:linear-gradient(90deg,var(--black) 0%,var(--black) 40%,var(--blue) 100%);
+  }
+
+  .innate-thanks .card{
+    background:#fff;border:1px solid var(--line);border-radius:18px;
+    padding:32px 28px;box-shadow:0 10px 30px rgba(28,30,29,.06);
+  }
+  .innate-thanks .check{
+    width:64px;height:64px;border-radius:50%;margin:0 auto 18px;
+    background:var(--soft);color:var(--blue);display:flex;align-items:center;justify-content:center;
+  }
+  .innate-thanks .check svg{width:30px;height:30px}
+  .innate-thanks .card h2{
+    font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.3rem;color:var(--black);margin:0 0 10px;
+  }
+  .innate-thanks .card p{color:var(--muted);font-size:1.05rem;max-width:500px;margin:0 auto}
+
+  .innate-thanks .steps{list-style:none;padding:0;margin:26px auto 0;max-width:460px;text-align:left}
+  .innate-thanks .steps li{
+    display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line);
+    font-size:.98rem;color:var(--black);
+  }
+  .innate-thanks .steps li:first-child{border-top:none}
+  .innate-thanks .steps .num{
+    flex:none;width:28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;
+    font-family:'Montserrat',sans-serif;font-weight:700;font-size:.85rem;
+    display:flex;align-items:center;justify-content:center;margin-top:1px;
+  }
+
+  .innate-thanks .note{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    font-size:.88rem;color:var(--muted);margin-top:20px;
+  }
+  .innate-thanks .note svg{width:15px;height:15px;color:var(--blue);flex:none}
+
+  @media (max-width:600px){
+    .innate-thanks h1{font-size:1.6rem}
+    .innate-thanks .card{padding:26px 20px}
+    .innate-thanks .card p{font-size:1rem}
+  }
 </style>
-</head>
-<body>
-<main>
+
+<section class="innate-thanks">
+  <div class="eyebrow">Feedback Received</div>
+  <h1>Thank you for <span>your honesty.</span></h1>
+  <div class="stripe"></div>
+
   <div class="card">
-    <h1>Thank you for your honesty.</h1>
-    <p class="sub">We want every visit to feel great. Please tell us what we could do better, and Dr. Thomas or a member of our team will personally follow up.</p>
-
-    <div class="form-wrap">
-      <!--
-        PASTE YOUR GHL FEEDBACK FORM EMBED HERE.
-        Suggested fields: First Name (required), Last Name, Phone (required), Email,
-        Office Visited (New London / Claremont), "What could we have done better?" (required),
-        "Would you like us to contact you?" (Yes / No).
-        Form thank you message:
-        "Thank you. Your message has been sent to our team and we will be in touch soon."
-      -->
+    <div class="check">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
     </div>
+    <h2>Your message is on its way to our team.</h2>
+    <p>We want every visit to feel great, and your feedback helps us get there. Dr. Thomas or a member of our team will personally follow up with you.</p>
 
-    <div class="divider"></div>
-    <p class="note">You are also welcome to share a public review on Google:</p>
-    <div class="loc-links">
-      <a href="https://g.page/r/CSl5GUiZ3QkhEAE/review" target="_blank" rel="noopener">New London</a>
-      <a href="https://g.page/r/CVPtKn-aZm0pEAE/review" target="_blank" rel="noopener">Claremont</a>
-    </div>
+    <ul class="steps">
+      <li><span class="num">1</span><span>Our team reads every message we receive.</span></li>
+      <li><span class="num">2</span><span>We look closely at what we can do better.</span></li>
+      <li><span class="num">3</span><span>We reach out to you personally to make it right.</span></li>
+    </ul>
   </div>
-</main>
-</body>
-</html>
+
+  <p class="note">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+    Your feedback stays private with our team. Thank you for helping us grow.
+  </p>
+</section>
