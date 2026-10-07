@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#f7faf9;--card:#ffffff;--ink:#1f3a4a;--muted:#5b7280;--brand:#0f5c6e;--brand-dark:#0a4452;--line:#e3ece9}
+  :root{--bg:#f7faf9;--card:#ffffff;--ink:#1C1E1D;--muted:#5b7280;--brand:#3A83C5;--brand-dark:#1C1E1D;--line:#e3ece9}
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--ink);font-family:'Inter','Open Sans',system-ui,sans-serif;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
   h1{font-family:'Montserrat','Poppins',sans-serif;color:var(--ink);line-height:1.25}
@@ -16,8 +16,8 @@
   .card h1{font-size:1.75rem;margin-bottom:10px}
   .card p.sub{color:var(--muted);font-size:1.05rem;margin-bottom:24px}
   .stars{font-size:1.9rem;color:#f2b632;letter-spacing:4px;margin-bottom:12px}
-  .btn{display:inline-block;width:100%;max-width:360px;min-height:52px;padding:14px 24px;border-radius:12px;background:var(--brand);color:#fff;font-weight:600;font-size:1.05rem;text-decoration:none;transition:background .2s}
-  .btn:hover,.btn:focus{background:var(--brand-dark)}
+  .btn{display:block;width:100%;max-width:360px;margin:0 auto;min-height:54px;padding:15px 24px;border-radius:12px;background:var(--brand);color:#fff !important;font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.15rem;text-align:center;text-decoration:none;box-shadow:0 8px 18px rgba(58,131,197,.30);transition:background .2s,transform .15s}
+  .btn:hover,.btn:focus{background:var(--brand-dark);transform:translateY(-1px)}
   .note{font-size:.9rem;color:var(--muted);margin-top:18px}
   .note a{color:var(--brand);font-weight:600}
   .divider{height:1px;background:var(--line);margin:28px 0}
@@ -32,7 +32,7 @@
   <div class="card">
     <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
     <h1>Thank you! We're so glad you had a great visit.</h1>
-    <p class="sub">Would you take a moment to share your experience on Google? Your review helps other people in Claremont find natural, drug free care and helps our practice grow.</p>
+    <p class="sub">Would you take a moment to share your experience on Google? It only takes a minute, and your kind words help families in Claremont discover the care that made a difference for you.</p>
 
     <a class="btn" href="https://g.page/r/CVPtKn-aZm0pEAE/review" target="_blank" rel="noopener">Leave a Google Review</a>
     <p class="note">Taking you to Google in <strong id="count">5</strong> seconds...</p>

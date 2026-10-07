@@ -1,15 +1,15 @@
 /* =========================================================
    INNATE CHIROPRACTIC | "Review" Survey Custom CSS
    Paste into: Survey Builder > Advanced > Custom CSS
-   Brand: Innate Black #0B0B0C + Innate Blue #1A8FD6
+   Brand: Innate Black #1C1E1D + Innate Blue #3A83C5
    ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,800&family=Inter:wght@400;500;600&display=swap');
 
 :root{
-  --innate-black:#0B0B0C;
-  --innate-blue:#1A8FD6;
-  --innate-blue-dark:#0F6FAE;
+  --innate-black:#1C1E1D;
+  --innate-blue:#3A83C5;
+  --innate-blue-dark:#2C6AA3;
   --innate-blue-soft:#E8F4FC;
   --innate-ink:#1C2430;
   --innate-muted:#5E6B78;
@@ -29,7 +29,7 @@ form{
   background:#FFFFFF !important;
   border:1px solid var(--innate-line) !important;
   border-radius:20px !important;
-  box-shadow:0 18px 50px rgba(11,11,12,.08),0 2px 6px rgba(26,143,214,.08) !important;
+  box-shadow:0 18px 50px rgba(11,11,12,.08),0 2px 6px rgba(58,131,197,.08) !important;
   overflow:hidden !important;
   position:relative !important;
   max-width:640px !important;
@@ -115,7 +115,7 @@ input:focus,textarea:focus,select:focus,
   outline:none !important;
   background:#FFFFFF !important;
   border-color:var(--innate-blue) !important;
-  box-shadow:0 0 0 4px rgba(26,143,214,.15) !important;
+  box-shadow:0 0 0 4px rgba(58,131,197,.15) !important;
 }
 
 ::placeholder,
@@ -196,7 +196,7 @@ button[type="submit"],
   min-height:50px !important;
   cursor:pointer !important;
   text-decoration:none !important;
-  box-shadow:0 8px 18px rgba(26,143,214,.30) !important;
+  box-shadow:0 8px 18px rgba(58,131,197,.30) !important;
   transition:transform .15s ease,background .2s ease,box-shadow .2s ease !important;
 }
 .ghl-footer-next:hover,

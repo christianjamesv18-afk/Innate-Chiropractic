@@ -44,7 +44,7 @@ ROUTING LOGIC (set inside the survey's conditional logic / redirect settings)
 
 PAGE 2A: THANK YOU, NEW LONDON
 Headline: "Thank you! We're so glad you had a great visit."
-Body: "Would you take a moment to share your experience on Google? Your review helps other people in New London find natural, drug free care and helps our small practice grow."
+Body: "Would you take a moment to share your experience on Google? It only takes a minute, and your kind words help families in New London discover the care that made a difference for you."
 Primary button: "Leave a Google Review" -> opens https://g.page/r/CSl5GUiZ3QkhEAE/review in a new tab.
 Optional: auto redirect to https://g.page/r/CSl5GUiZ3QkhEAE/review after 5 seconds, with the button as a backup.
 Small secondary line: "Have a suggestion for us too? Tell us here" -> links to Page 3.
