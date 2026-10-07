@@ -1,46 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How Was Your Visit? | Innate Chiropractic</title>
+<!-- =========================================================
+     INNATE CHIROPRACTIC | "Rate Us" survey page
+     Paste into a Custom HTML / Code element on the Rate Us funnel step.
+     All styles are scoped to .innate-survey so they do not affect the rest of the page.
+     ========================================================= -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
 <style>
-  :root{--bg:#f7faf9;--card:#ffffff;--ink:#1C1E1D;--muted:#5b7280;--brand:#3A83C5;--brand-dark:#1C1E1D;--line:#e3ece9}
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--ink);font-family:'Inter','Open Sans',system-ui,sans-serif;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
-  h1{font-family:'Montserrat','Poppins',sans-serif;color:var(--ink);line-height:1.25}
-  main{flex:1;width:100%;max-width:640px;margin:0 auto;padding:24px 16px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px 24px;box-shadow:0 6px 24px rgba(15,92,110,.06);text-align:center}
-  .card h1{font-size:1.75rem;margin-bottom:10px}
-  .card p.sub{color:var(--muted);font-size:1.05rem;margin-bottom:24px}
-  .stars{font-size:1.9rem;color:#f2b632;letter-spacing:4px;margin-bottom:12px}
-  .btn{display:block;width:100%;max-width:360px;margin:0 auto;min-height:54px;padding:15px 24px;border-radius:12px;background:var(--brand);color:#fff !important;font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.15rem;text-align:center;text-decoration:none;box-shadow:0 8px 18px rgba(58,131,197,.30);transition:background .2s,transform .15s}
-  .btn:hover,.btn:focus{background:var(--brand-dark);transform:translateY(-1px)}
-  .note{font-size:.9rem;color:var(--muted);margin-top:18px}
-  .note a{color:var(--brand);font-weight:600}
-  .divider{height:1px;background:var(--line);margin:28px 0}
-  .loc-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px}
-  .loc-links a{color:var(--brand);font-weight:600;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:.92rem}
-  .form-wrap{text-align:left;margin-top:8px}
-  @media (max-width:480px){.card{padding:26px 18px}.card h1{font-size:1.5rem}}
+  .innate-survey{
+    --blue:#3A83C5;--black:#1C1E1D;--muted:#5E6B78;--soft:#EAF2FA;--line:#DCE6EE;
+    font-family:'Inter',system-ui,sans-serif;color:var(--black);line-height:1.6;
+    max-width:680px;margin:0 auto;padding:8px 16px 32px;text-align:center;box-sizing:border-box;
+  }
+  .innate-survey *{box-sizing:border-box}
+
+  .innate-survey .eyebrow{
+    display:inline-block;background:var(--soft);color:var(--blue);
+    font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;
+    letter-spacing:1.6px;text-transform:uppercase;padding:7px 16px;border-radius:999px;margin-bottom:16px;
+  }
+  .innate-survey h1{
+    font-family:'Montserrat',sans-serif;font-weight:800;font-size:2.1rem;line-height:1.2;
+    color:var(--black);margin:0 0 12px;
+  }
+  .innate-survey h1 span{color:var(--blue)}
+  .innate-survey .stripe{
+    width:72px;height:5px;border-radius:999px;margin:0 auto 16px;
+    background:linear-gradient(90deg,var(--black) 0%,var(--black) 40%,var(--blue) 100%);
+  }
+  .innate-survey .sub{color:var(--muted);font-size:1.08rem;max-width:520px;margin:0 auto 22px}
+
+  .innate-survey .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:0 0 26px;padding:0;list-style:none}
+  .innate-survey .chips li{
+    display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);
+    border-radius:999px;padding:8px 14px;font-size:.9rem;font-weight:500;color:var(--black);
+  }
+  .innate-survey .chips svg{width:16px;height:16px;flex:none;color:var(--blue)}
+
+  .innate-survey .form-wrap{text-align:left}
+  .innate-survey .form-wrap iframe{display:block;min-height:420px}
+
+  .innate-survey .note{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    font-size:.88rem;color:var(--muted);margin-top:18px;
+  }
+  .innate-survey .note svg{width:15px;height:15px;color:var(--blue);flex:none}
+
+  @media (max-width:600px){
+    .innate-survey h1{font-size:1.6rem}
+    .innate-survey .sub{font-size:1rem}
+    .innate-survey .chips li{font-size:.84rem;padding:7px 12px}
+  }
 </style>
-</head>
-<body>
-<main>
-  <div class="card">
-    <h1>How was your visit with us?</h1>
-    <p class="sub">Your feedback helps Dr. Thomas and our team take better care of you. It only takes 30 seconds.</p>
 
-    <!-- LeadConnector survey: rating 1 to 5 + office. Routing lives in the survey's conditional logic. -->
-    <div class="form-wrap">
-      <iframe src="https://api.leadconnectorhq.com/widget/survey/dz7PbKxDOUfq2GrC0ZY4" style="border:none;width:100%;" scrolling="no" id="dz7PbKxDOUfq2GrC0ZY4" title="survey" data-cookie-consent="true" data-cookie-consent-provider="auto"></iframe>
-    </div>
+<section class="innate-survey">
+  <div class="eyebrow">Patient Feedback</div>
+  <h1>How was your visit <span>with us?</span></h1>
+  <div class="stripe"></div>
+  <p class="sub">Your feedback helps Dr. Thomas and our team take better care of you and your family. Just two quick questions and you are done.</p>
 
-    <p class="note">Your answers go directly to our team. Thank you for helping us grow.</p>
+  <ul class="chips">
+    <li>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      Takes 30 seconds
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      2 quick questions
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.65-9.5 9-9.5 9z"/></svg>
+      Read by our team
+    </li>
+  </ul>
+
+  <!-- LeadConnector survey: rating 1 to 5 + office. Routing lives in the survey's conditional logic. -->
+  <div class="form-wrap">
+    <iframe src="https://api.leadconnectorhq.com/widget/survey/dz7PbKxDOUfq2GrC0ZY4" style="border:none;width:100%;" scrolling="no" id="dz7PbKxDOUfq2GrC0ZY4" title="survey" data-cookie-consent="true" data-cookie-consent-provider="auto"></iframe>
   </div>
-</main>
+
+  <p class="note">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+    Your answers are private and go directly to our team. Thank you for helping us grow.
+  </p>
+</section>
+
 <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-</body>
-</html>
