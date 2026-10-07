@@ -2,9 +2,8 @@
 
 Copy everything inside the box below and paste it into your AI funnel builder (GoHighLevel AI Builder, ChatGPT, Claude, etc.).
 
-Before you paste it, replace these placeholders:
+The Google review links for both offices are already filled in.
 
-- `[LOGO URL]` with the Innate Chiropractic logo link (optional)
 
 ---
 
@@ -20,7 +19,7 @@ BRAND AND STYLE
 - Font: modern sans serif (Montserrat or Poppins for headings, Open Sans or Inter for body).
 - Mobile first. Most patients will open this from a text message on their phone.
 - Large tap friendly buttons, minimum 48px tall.
-- Logo at the top of every page: [LOGO URL]
+- No header and no footer on any page. Each page is just the main content card.
 - Do not use em dashes anywhere in the copy.
 
 PAGE 1: EXPERIENCE SURVEY (main page)
@@ -78,8 +77,6 @@ AUTOMATIONS / NOTIFICATIONS
 - On a 5 star rating: tag the contact "5-star-review-requested" and the office tag.
 - Add the contact to a "Review Funnel" pipeline with stages: Survey Submitted, Sent to Google, Needs Follow Up, Resolved.
 
-FOOTER (all pages)
-Innate Chiropractic | New London | Claremont | Phone | Privacy Policy
 ```
 
 ---
