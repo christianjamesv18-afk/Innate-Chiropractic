@@ -1,260 +1,146 @@
 /* =========================================================
-   INNATE CHIROPRACTIC | "Review" Survey Custom CSS
+   INNATE CHIROPRACTIC | "Review" Survey Custom CSS (v2)
    Paste into: Survey Builder > Advanced > Custom CSS
+   (replace everything that is there now)
    Brand: Innate Black #1C1E1D + Innate Blue #3A83C5
    ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,800&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap');
 
-:root{
-  --innate-black:#1C1E1D;
-  --innate-blue:#3A83C5;
-  --innate-blue-dark:#2C6AA3;
-  --innate-blue-soft:#E8F4FC;
-  --innate-ink:#1C2430;
-  --innate-muted:#5E6B78;
-  --innate-line:#DCE6EE;
-}
-
-/* ---------- Page background ---------- */
+/* ---------- Base font ---------- */
 body{
-  background:linear-gradient(180deg,#F4F9FD 0%,#FFFFFF 60%) !important;
   font-family:'Inter',system-ui,sans-serif !important;
-  color:var(--innate-ink) !important;
+  color:#1C1E1D !important;
 }
 
-/* ---------- Survey card ---------- */
-#_builder-form,
-form{
-  background:#FFFFFF !important;
-  border:1px solid var(--innate-line) !important;
-  border-radius:20px !important;
-  box-shadow:0 18px 50px rgba(11,11,12,.08),0 2px 6px rgba(58,131,197,.08) !important;
-  overflow:hidden !important;
-  position:relative !important;
-  max-width:640px !important;
-  margin:0 auto !important;
-}
-
-/* Brand stripe across the top of the card (black to blue, like the logo) */
-#_builder-form::before,
+/* ---------- Brand stripe at the top of the questions ---------- */
 form::before{
   content:"";
   display:block;
-  height:8px;
-  width:100%;
-  background:linear-gradient(90deg,var(--innate-black) 0%,var(--innate-black) 35%,var(--innate-blue) 100%);
-}
-
-/* Inner spacing */
-.form-builder--item,
-.ghl-question,
-.form-field-wrapper{
-  padding:6px 28px !important;
-  margin-bottom:10px !important;
+  height:6px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#1C1E1D 0%,#1C1E1D 35%,#3A83C5 100%);
+  margin:0 0 18px;
 }
 
 /* ---------- Question labels ---------- */
-.form-builder--item label,
-.ghl-question label,
 label{
   font-family:'Montserrat',sans-serif !important;
   font-weight:700 !important;
-  font-size:1.08rem !important;
-  color:var(--innate-black) !important;
+  font-size:1.05rem !important;
+  color:#1C1E1D !important;
   line-height:1.4 !important;
-  margin:18px 0 10px !important;
-  display:block !important;
+  margin-bottom:8px !important;
 }
+label:empty{display:none !important}
 
-/* Small blue accent bar before each question */
-.form-builder--item label::before,
-.ghl-question label::before{
-  content:"";
-  display:inline-block;
-  width:6px;
-  height:18px;
-  border-radius:3px;
-  background:var(--innate-blue);
-  margin-right:10px;
-  vertical-align:-3px;
-}
-
-/* ---------- Inputs, dropdowns, text areas ---------- */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-textarea,
-select,
-.form-control,
-.multiselect__tags,
-.multiselect .multiselect__tags{
+/* ---------- Dropdown box (outer box only) ---------- */
+.multiselect__tags{
   background:#FAFCFE !important;
-  border:2px solid var(--innate-line) !important;
+  border:2px solid #DCE6EE !important;
   border-radius:12px !important;
-  min-height:54px !important;
-  padding:14px 16px !important;
-  font-family:'Inter',sans-serif !important;
-  font-size:1rem !important;
-  color:var(--innate-ink) !important;
-  transition:border-color .2s ease,box-shadow .2s ease,background .2s ease !important;
-  box-shadow:none !important;
+  min-height:52px !important;
+  display:flex !important;
+  align-items:center !important;
+  padding:0 44px 0 16px !important;
+  transition:border-color .2s ease,box-shadow .2s ease !important;
 }
-
-textarea{min-height:140px !important;resize:vertical !important}
-
-input:hover,textarea:hover,select:hover,
-.multiselect:hover .multiselect__tags{
-  border-color:#B9D9EF !important;
-}
-
-input:focus,textarea:focus,select:focus,
-.form-control:focus,
+.multiselect:hover .multiselect__tags{border-color:#B7D2EA !important}
 .multiselect--active .multiselect__tags{
-  outline:none !important;
   background:#FFFFFF !important;
-  border-color:var(--innate-blue) !important;
+  border-color:#3A83C5 !important;
   box-shadow:0 0 0 4px rgba(58,131,197,.15) !important;
 }
 
-::placeholder,
+/* Things INSIDE the dropdown box: no borders, no boxes */
+.multiselect__input,
+.multiselect__single,
 .multiselect__placeholder{
-  color:#98A5B1 !important;
-  font-size:.98rem !important;
+  border:none !important;
+  box-shadow:none !important;
+  background:transparent !important;
+  min-height:0 !important;
+  padding:0 !important;
+  margin:0 !important;
+  font-size:1rem !important;
+  color:#1C1E1D !important;
 }
+.multiselect__single{font-weight:600 !important}
+.multiselect__placeholder{color:#98A5B1 !important}
 
-/* Dropdown arrow in brand blue */
-.multiselect__select::before{
-  border-color:var(--innate-blue) transparent transparent !important;
-}
+/* Arrow */
+.multiselect__select{height:50px !important}
+.multiselect__select::before{border-color:#3A83C5 transparent transparent !important}
 
-/* Dropdown menu */
+/* Open list */
 .multiselect__content-wrapper{
-  border:2px solid var(--innate-blue) !important;
+  border:2px solid #3A83C5 !important;
   border-top:none !important;
   border-radius:0 0 12px 12px !important;
-  box-shadow:0 12px 24px rgba(11,11,12,.08) !important;
+  box-shadow:0 12px 24px rgba(28,30,29,.08) !important;
 }
-.multiselect__option{
-  padding:14px 16px !important;
-  font-size:1rem !important;
-  color:var(--innate-ink) !important;
-}
-.multiselect__option--highlight,
-.multiselect__option:hover{
-  background:var(--innate-blue-soft) !important;
-  color:var(--innate-blue-dark) !important;
-}
+.multiselect__option{padding:14px 16px !important;font-size:1rem !important}
+.multiselect__option--highlight{background:#EAF2FA !important;color:#2C6AA3 !important}
 .multiselect__option--selected,
 .multiselect__option--selected.multiselect__option--highlight{
-  background:var(--innate-blue) !important;
-  color:#FFFFFF !important;
-  font-weight:600 !important;
-}
-.multiselect__single{
-  background:transparent !important;
-  font-weight:600 !important;
-  color:var(--innate-black) !important;
+  background:#3A83C5 !important;color:#FFFFFF !important;font-weight:600 !important;
 }
 
-/* ---------- Radio / checkbox (if you switch questions to these) ---------- */
-input[type="radio"],
-input[type="checkbox"]{
-  accent-color:var(--innate-blue) !important;
-  width:20px !important;
-  height:20px !important;
+/* ---------- Text box on Slide 2 ---------- */
+textarea{
+  background:#FAFCFE !important;
+  border:2px solid #DCE6EE !important;
+  border-radius:12px !important;
+  padding:14px 16px !important;
+  font-family:'Inter',sans-serif !important;
+  font-size:1rem !important;
+  min-height:130px !important;
+}
+textarea:focus{
+  outline:none !important;
+  background:#FFFFFF !important;
+  border-color:#3A83C5 !important;
+  box-shadow:0 0 0 4px rgba(58,131,197,.15) !important;
 }
 
-/* ---------- Footer bar with Next / Back / Submit ---------- */
-.ghl-footer,
-.survey-footer,
-.form-footer,
-[class*="footer"]{
-  background:#F7FAFC !important;
-  border-top:1px solid var(--innate-line) !important;
-  padding:18px 28px !important;
-}
-
-/* Next + Submit: solid blue pill buttons */
-.ghl-footer-next,
-.ghl-btn,
-.btn-next,
-button[type="submit"],
-[class*="footer"] button:last-child,
-[class*="footer"] a:last-child{
-  background:var(--innate-blue) !important;
+/* ---------- Next / Submit buttons ---------- */
+button:not(.multiselect__select){
+  background:#3A83C5 !important;
   color:#FFFFFF !important;
   font-family:'Montserrat',sans-serif !important;
   font-weight:700 !important;
   font-size:1rem !important;
-  letter-spacing:.3px !important;
-  text-transform:uppercase !important;
   border:none !important;
   border-radius:999px !important;
-  padding:14px 30px !important;
-  min-height:50px !important;
+  padding:12px 28px !important;
+  box-shadow:0 6px 16px rgba(58,131,197,.28) !important;
   cursor:pointer !important;
-  text-decoration:none !important;
-  box-shadow:0 8px 18px rgba(58,131,197,.30) !important;
-  transition:transform .15s ease,background .2s ease,box-shadow .2s ease !important;
+  transition:background .2s ease !important;
 }
-.ghl-footer-next:hover,
-.ghl-btn:hover,
-.btn-next:hover,
-button[type="submit"]:hover,
-[class*="footer"] button:last-child:hover,
-[class*="footer"] a:last-child:hover{
-  background:var(--innate-black) !important;
-  box-shadow:0 8px 18px rgba(11,11,12,.25) !important;
-  transform:translateY(-1px) !important;
-}
+button:not(.multiselect__select):hover{background:#1C1E1D !important}
 
-/* Go Back: quiet text button */
-.ghl-footer-back,
-.btn-back,
-[class*="footer"] button:first-child:not(:last-child),
-[class*="footer"] a:first-child:not(:last-child){
+/* Anything inside a button (text, arrow icon) stays clean */
+button:not(.multiselect__select) *{
   background:transparent !important;
-  color:var(--innate-muted) !important;
-  font-family:'Montserrat',sans-serif !important;
-  font-weight:600 !important;
-  box-shadow:none !important;
+  color:inherit !important;
+  fill:currentColor !important;
   border:none !important;
-  text-transform:none !important;
-}
-.ghl-footer-back:hover,
-.btn-back:hover{
-  color:var(--innate-blue) !important;
+  box-shadow:none !important;
 }
 
-/* ---------- Progress bar (if enabled in Survey settings) ---------- */
-.progress,
-[class*="progress"]{
-  background:var(--innate-blue-soft) !important;
-  border-radius:999px !important;
-  height:8px !important;
+/* "Go Back" = the first of two buttons side by side: quiet text style */
+button:not(.multiselect__select):first-child:not(:last-child){
+  background:transparent !important;
+  color:#5E6B78 !important;
+  box-shadow:none !important;
+  padding-left:0 !important;
 }
-.progress-bar,
-[class*="progress"] > div{
-  background:linear-gradient(90deg,var(--innate-black),var(--innate-blue)) !important;
-  border-radius:999px !important;
-}
-
-/* ---------- Error messages ---------- */
-.error,
-.text-danger,
-.error-message{
-  color:#D64545 !important;
-  font-size:.88rem !important;
-  font-weight:500 !important;
+button:not(.multiselect__select):first-child:not(:last-child):hover{
+  background:transparent !important;
+  color:#3A83C5 !important;
 }
 
 /* ---------- Mobile ---------- */
 @media (max-width:600px){
-  #_builder-form,form{border-radius:16px !important}
-  .form-builder--item,.ghl-question,.form-field-wrapper{padding:4px 18px !important}
-  .ghl-footer,.survey-footer,.form-footer,[class*="footer"]{padding:16px 18px !important}
   label{font-size:1rem !important}
-  .ghl-footer-next,.ghl-btn,button[type="submit"]{width:100% !important}
 }
