@@ -4,8 +4,6 @@ Copy everything inside the box below and paste it into your AI funnel builder (G
 
 Before you paste it, replace these placeholders:
 
-- `[NEW LONDON GOOGLE REVIEW LINK]` with the New London Google review link
-- `[CLAREMONT GOOGLE REVIEW LINK]` with the Claremont Google review link
 - `[LOGO URL]` with the Innate Chiropractic logo link (optional)
 
 ---
@@ -48,14 +46,14 @@ ROUTING LOGIC (set inside the survey's conditional logic / redirect settings)
 PAGE 2A: THANK YOU, NEW LONDON
 Headline: "Thank you! We're so glad you had a great visit."
 Body: "Would you take a moment to share your experience on Google? Your review helps other people in New London find natural, drug free care and helps our small practice grow."
-Primary button: "Leave a Google Review" -> opens [NEW LONDON GOOGLE REVIEW LINK] in a new tab.
-Optional: auto redirect to [NEW LONDON GOOGLE REVIEW LINK] after 5 seconds, with the button as a backup.
+Primary button: "Leave a Google Review" -> opens https://g.page/r/CSl5GUiZ3QkhEAE/review in a new tab.
+Optional: auto redirect to https://g.page/r/CSl5GUiZ3QkhEAE/review after 5 seconds, with the button as a backup.
 Small secondary line: "Have a suggestion for us too? Tell us here" -> links to Page 3.
 
 PAGE 2B: THANK YOU, CLAREMONT
 Same layout and copy as Page 2A, but:
 - Reference Claremont instead of New London.
-- Button and auto redirect go to [CLAREMONT GOOGLE REVIEW LINK].
+- Button and auto redirect go to https://g.page/r/CVPtKn-aZm0pEAE/review.
 
 PAGE 3: WE'D LOVE TO HEAR MORE (ratings 1 to 4)
 Headline: "Thank you for your honesty."
@@ -71,7 +69,7 @@ Message form fields:
 - "Would you like us to contact you?" (Yes / No)
 Submit button: "Send My Feedback"
 
-Below the form, a small, neutral line: "You are also welcome to share a public review on Google:" with two text links, "New London" -> [NEW LONDON GOOGLE REVIEW LINK] and "Claremont" -> [CLAREMONT GOOGLE REVIEW LINK].
+Below the form, a small, neutral line: "You are also welcome to share a public review on Google:" with two text links, "New London" -> https://g.page/r/CSl5GUiZ3QkhEAE/review and "Claremont" -> https://g.page/r/CVPtKn-aZm0pEAE/review.
 
 After submit, show: "Thank you. Your message has been sent to our team and we will be in touch soon."
 
