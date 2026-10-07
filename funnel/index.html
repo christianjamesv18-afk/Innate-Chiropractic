@@ -28,14 +28,10 @@
     width:72px;height:5px;border-radius:999px;margin:0 auto 16px;
     background:linear-gradient(90deg,var(--black) 0%,var(--black) 40%,var(--blue) 100%);
   }
-  .innate-survey .sub{color:var(--muted);font-size:1.08rem;max-width:520px;margin:0 auto 22px}
-
-  .innate-survey .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:0 0 26px;padding:0;list-style:none}
-  .innate-survey .chips li{
+  .innate-survey .sub{color:var(--muted);font-size:1.08rem;max-width:520px;margin:0 auto 28px}
     display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);
     border-radius:999px;padding:8px 14px;font-size:.9rem;font-weight:500;color:var(--black);
   }
-  .innate-survey .chips svg{width:16px;height:16px;flex:none;color:var(--blue)}
 
   .innate-survey .form-wrap{text-align:left}
   .innate-survey .form-wrap iframe{display:block;min-height:420px}
@@ -49,7 +45,6 @@
   @media (max-width:600px){
     .innate-survey h1{font-size:1.6rem}
     .innate-survey .sub{font-size:1rem}
-    .innate-survey .chips li{font-size:.84rem;padding:7px 12px}
   }
 </style>
 
@@ -57,18 +52,7 @@
   <div class="eyebrow">Patient Feedback</div>
   <h1>How was your visit to <span>Innate Chiropractic?</span></h1>
   <div class="stripe"></div>
-  <p class="sub">Your feedback helps Dr. Thomas and our team take better care of you and your family, and shows us how we can improve.</p>
-
-  <ul class="chips">
-    <li>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-      2 quick questions
-    </li>
-    <li>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.65-9.5 9-9.5 9z"/></svg>
-      Read by our team
-    </li>
-  </ul>
+  <p class="sub">Your feedback helps our team take better care of you and your family, and shows us how we can improve in the future.</p>
 
   <!-- LeadConnector survey: rating 1 to 5 + office. Routing lives in the survey's conditional logic. -->
   <div class="form-wrap">
